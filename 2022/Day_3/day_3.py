@@ -5,3 +5,4 @@ with open("day_3_input.txt") as f:
 for i in range(len(data)):
   firstpart, secondpart = data[i][:len(data[i])//2], data[i][len(data[i])//2:]
   set(firstpart)
+  set(secondpart)
