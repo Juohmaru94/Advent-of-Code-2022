@@ -15,3 +15,17 @@ for i in range(len(data)):
     count += values[common]
 
 print(f"The answer to question 1 is: {count}")
+
+def chunks(data, n):
+  for i in range(0, len(data), n):
+    yield data[i:i + n]
+  
+dataset = list(chunks(data,3))
+
+new_count = 0
+
+for i in range(len(dataset)):
+  same = set.intersection(*map(set,dataset[i]))
+  new_count += values[list(same)[0]]
+print(f"The answer to question 2 is: {new_count}")
+  
